@@ -4,7 +4,7 @@ class PotatoCounter extends Component {
   constructor(props) {
     super();
     this.state = {
-      potatoes: 0
+      potatoes: 1
     };
   }
 
@@ -17,9 +17,10 @@ class PotatoCounter extends Component {
   render() {
     return (
       <div className="PotatoCounter">
-        <p>You have {this.state.potatoes} potatoes</p>
+        <p className="is-size-3">You have {this.state.potatoes} potato :)</p>
+        <hr />
         <button
-          className="button is-medium is-primary"
+          className="button is-large is-primary"
           onClick={() => this.onAddPotato()}
         >
           Add a potato!
