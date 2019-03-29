@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 class PotatoCounter extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       potatoes: 1
     };
+    this.onAddPotato = this.onAddPotato.bind(this);
   }
 
   onAddPotato() {
@@ -21,7 +22,7 @@ class PotatoCounter extends Component {
         <hr />
         <button
           className="button is-large is-primary"
-          onClick={() => this.onAddPotato()}
+          onClick={this.onAddPotato}
         >
           Add a potato!
         </button>
